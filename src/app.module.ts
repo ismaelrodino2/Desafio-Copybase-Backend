@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { BillModule } from './modules/bill/bill.module';
+import { ExcelModule } from './modules/excel/excel.module';
 
 @Module({
-  imports: [BillModule],
+  imports: [ExcelModule],
   controllers: [],
   providers: [],
 })

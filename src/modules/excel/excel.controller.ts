@@ -9,15 +9,15 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { BillService } from './bill.service';
+import { ExcelService } from './excel.service';
 
-@Controller('bill')
-export class BillController {
-  constructor(private readonly billService: BillService) {}
+@Controller('excel')
+export class ExcelController {
+  constructor(private readonly excelService: ExcelService) {}
 
   @Post()
   @UseInterceptors(FileInterceptor('excelFile'))
   async create(@UploadedFile() file: Express.Multer.File, @Body() data: any) {
-    return this.billService.create(file);
+    return this.excelService.create(file);
   }
 }

@@ -1,15 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import { MetricsService } from './pdf-parser.service';
+import { MetricsService } from './excel-parser.service';
 import * as xlsx from 'node-xlsx';
 import * as Papa from 'papaparse';
 import { Express } from 'express';
 
-export abstract class BillRepository {
+export abstract class ExcelRepository {
   abstract create(file: Express.Multer.File): Promise<any>;
 }
 
 @Injectable()
-export class BillUsecase extends BillRepository {
+export class ExcelUsecase extends ExcelRepository {
   constructor(private metricsService: MetricsService) {
     super();
   }
