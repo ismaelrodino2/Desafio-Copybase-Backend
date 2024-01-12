@@ -5,15 +5,14 @@ import { addDays, startOfDay, eachMonthOfInterval, lastDayOfMonth, isBefore, isA
 @Injectable()
 export class MetricsService {
   // Função auxiliar para converter o número de série do Excel em uma data
-  private excelDateToJSDate(serial: number): Date {
+  public excelDateToJSDate(serial: number): Date {
     const excelBaseDate = new Date(1900, 0, 1);
     return startOfDay(addDays(excelBaseDate, serial - 2));
   }
 
   // Função para processar o arquivo Excel
-  public async processFile(buffer: Buffer): Promise<{ mrr: any[], churnRate: any[] }> {
-    const workbook = xlsx.parse(buffer);
-    const rows = workbook[0].data as any[][];
+  public async processFile(rows: any): Promise<{ mrr: any[], churnRate: any[] }> {
+    console.log('rowsssssss', rows)
 
     // Remova o cabeçalho se houver
     rows.shift();

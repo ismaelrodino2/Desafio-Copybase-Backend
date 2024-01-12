@@ -32,6 +32,9 @@ dependencies:
   node-xlsx:
     specifier: ^0.23.0
     version: 0.23.0
+  papaparse:
+    specifier: ^5.4.1
+    version: 5.4.1
   pdfreader:
     specifier: ^3.0.2
     version: 3.0.2
@@ -61,6 +64,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.3.1
     version: 20.10.5
+  '@types/papaparse':
+    specifier: ^5.3.14
+    version: 5.3.14
   '@types/supertest':
     specifier: ^2.0.12
     version: 2.0.16
@@ -1262,6 +1268,12 @@ packages:
     resolution: {integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==}
     dependencies:
       undici-types: 5.26.5
+    dev: true
+
+  /@types/papaparse@5.3.14:
+    resolution: {integrity: sha512-LxJ4iEFcpqc6METwp9f6BV6VVc43m6MfH0VqFosHvrUgfXiFe6ww7R3itkOQ+TCK6Y+Iv/+RnnvtRZnkc5Kc9g==}
+    dependencies:
+      '@types/node': 20.10.5
     dev: true
 
   /@types/phoenix@1.6.4:
@@ -3647,6 +3659,10 @@ packages:
     dependencies:
       p-limit: 3.1.0
     dev: true
+
+  /papaparse@5.4.1:
+    resolution: {integrity: sha512-HipMsgJkZu8br23pW15uvo6sib6wne/4woLZPlFf3rpDyMe9ywEXUsuD7+6K9PRkJlVT51j/sCOYDKGGS3ZJrw==}
+    dev: false
 
   /parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
